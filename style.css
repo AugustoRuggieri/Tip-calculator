@@ -55,9 +55,9 @@ input {
     font-size: 24px;
     font-weight: bolder;
 
-    padding: 5px;
-    padding-right: 18px;
+    padding: 5px 0 5px 0;
     text-align: right;
+    width: 312px;
 }
 
 .bill-input {
@@ -69,7 +69,7 @@ input {
     display: grid;
     margin-top: 0.7rem;
     margin-bottom: 2rem;
-    grid-template-columns: 144px 144px;
+    grid-template-columns: 146px 146px;
     column-gap: 18px;
     row-gap: 18px;
 }
@@ -167,6 +167,12 @@ footer {
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 }
+
+
+
+/*------------- MEDIA QUERIES -------------*/
+
+
 
 @media only screen and (min-width: 1000px) {
     body {
