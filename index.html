@@ -22,7 +22,7 @@
         <article>
           <label>Bill</label>
           <br>
-          <input type="number" class="input bill-input" id="bill-input">
+          <input type="number" class="input bill-input" id="bill-input" min="0">
         </article>
 
         <article class="tip-percentage">
@@ -33,16 +33,19 @@
             <div class="tips tip-15">15%</div>
             <div class="tips tip-25">25%</div>
             <div class="tips tip-50">50%</div>
-            <div id="tip-custom"><input type="number" class="tip-custom" placeholder="Custom"></div>
+            <div id="tip-custom">
+              <input type="number" class="tip-custom" id="tip-custom-input" min="0" max="100" placeholder="Custom">
+            </div>
           </div>
           
         </article>
 
         <article>
-          <label>Number of People</label>
-          <label for="" class="error">Can't be zero</label>
-          <br>
-          <input type="number" class="input people-input" id="people-input" value="">
+          <div class="people-label">
+            <label>Number of People</label>
+            <label for="" class="error" id="error">Can't be zero</label>
+          </div>
+          <input type="number" class="input people-input" id="people-input" value="" min="0">
         </article>
       </div>
 
@@ -63,7 +66,7 @@
           <div class="amount" id="total-amount"></div>
         </article>
   
-        <div class="reset">RESET</div>
+        <div class="reset" id="reset-btn">RESET</div>
       </div>
   </div>
   <footer>

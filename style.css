@@ -48,8 +48,10 @@ input {
     background-position: 17px 15px;
     background-repeat: no-repeat;
     border: none;
+    border-radius: 4px;
     outline: none;
     color: var(--very-dark-cyan);
+    cursor: pointer;
 
     font-family: "Space Mono", monospace;
     font-size: 24px;
@@ -95,9 +97,22 @@ input {
     font-weight: bolder;
 }
 
+#tip-custom-input {
+    text-align: center;
+}
+
+.active-tip-custom {
+    border: 2px solid var(--strong-cyan);
+}
+
 #tip-custom input {
     box-sizing: border-box;
     width: 100%;
+}
+
+.people-label {
+    display: flex;
+    justify-content: space-between;
 }
 
 .people-input {
@@ -105,8 +120,17 @@ input {
     margin-bottom: 2rem;
 }
 
+.people-input-error {
+    border: 2px solid red;
+}
+
 .error {
     display: none;
+}
+
+.error-active {
+    display: inline;
+    margin-left: 50px;
     color: red;
 }
 
