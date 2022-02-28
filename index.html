@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
 
@@ -28,12 +28,12 @@
         <article class="tip-percentage">
           <label>Select Tip %</label>
           <div class="tip">
-            <div class="tips tip-5">5%</div>
-            <div class="tips tip-10">10%</div>
-            <div class="tips tip-15">15%</div>
-            <div class="tips tip-25">25%</div>
-            <div class="tips tip-50">50%</div>
-            <div id="tip-custom">
+            <div class="tip-btn tips tip-5">5%</div>
+            <div class="tip-btn tips tip-10">10%</div>
+            <div class="tip-btn tips tip-15">15%</div>
+            <div class="tip-btn tips tip-25">25%</div>
+            <div class="tip-btn tips tip-50">50%</div>
+            <div class="tip-btn" id="tip-custom">
               <input type="number" class="tip-custom" id="tip-custom-input" min="0" max="100" placeholder="Custom">
             </div>
           </div>

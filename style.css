@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -39,8 +40,8 @@ body {
 
 label {
     color: hsl(186, 14%, 43%);
-    font-family: 700;
-    margin-bottom: 0.3rem;
+    font-weight: 700;
+    /* margin-bottom: 0.5rem; */
 }
 
 input {
@@ -57,20 +58,28 @@ input {
     font-size: 24px;
     font-weight: bolder;
 
+    margin-bottom: 2rem;
     padding: 5px 0 5px 0;
     text-align: right;
     width: 312px;
 }
 
+.selected-input {
+    border: 2px solid var(--strong-cyan);
+}
+
 .bill-input {
     background-image: url("images/icon-dollar.svg");
-    margin-bottom: 36px;
+}
+
+.tip-percentage {
+    margin-top: 1rem;
 }
 
 .tip {
     display: grid;
     margin-top: 0.7rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.2rem;
     grid-template-columns: 146px 146px;
     column-gap: 18px;
     row-gap: 18px;
@@ -117,7 +126,6 @@ input {
 
 .people-input {
     background-image: url("images/icon-person.svg");
-    margin-bottom: 2rem;
 }
 
 .people-input-error {
@@ -209,7 +217,7 @@ footer {
         flex-direction: row;
         border-radius: 1.4rem;
         padding: 2.3rem;
-        height: 440px;
+        height: fit-content;
         width: fit-content;
     }
 
@@ -223,18 +231,26 @@ footer {
     input {
         background-position: 17px 18px;
         padding: 9px;
-        width: 439px;
+        width: 100%;
+    }
+
+    .tip-percentage {
+        margin-top: 1.5rem;
     }
 
     .tip {
         grid-template-columns: 141px 141px 141px;
         row-gap: 1.2em;
         column-gap: 17px;
-        margin-bottom: 3.2rem;
+        margin-bottom: 2rem;
     }
 
     .tips {
         height: 55px;
+    }
+
+    .input {
+        margin-bottom: 1rem;
     }
 
     .second {

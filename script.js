@@ -7,7 +7,11 @@ const resetBtn = document.getElementById("reset-btn");
 const tips = document.querySelectorAll(".tips");
 
 billInput.addEventListener("input", handleBillValue);
+billInput.addEventListener("focus", highlightSelected);
+billInput.addEventListener("blur", removeSelected);
 peopleInput.addEventListener("input", handlePeopleValue);
+peopleInput.addEventListener("focus", highlightSelected);
+peopleInput.addEventListener("blur", removeSelected);
 tipCustom.addEventListener("click", highlightTipCustom);
 tipCustom.addEventListener("input", handleTipCustom);
 resetBtn.addEventListener("click", handleReset);
@@ -46,6 +50,7 @@ function handlePeopleValue() {
 function handleClick(event) {
     tips.forEach(function(val) {
         val.classList.remove("active-tip");
+        document.getElementById("tip-custom-input").classList.remove("active-tip-custom");
         if(event.target.innerHTML == val.innerHTML) {
             console.log(event.target.innerHTML);
             console.log(val.innerHTML);
@@ -57,7 +62,18 @@ function handleClick(event) {
     calculateTip();
 }
 
+function highlightSelected() {
+    this.classList.add("selected-input");
+}
+
+function removeSelected() {
+    this.classList.remove("selected-input");
+}
+
 function highlightTipCustom() {
+    tips.forEach(function(val) {
+        val.classList.remove("active-tip");
+    })
     document.getElementById("tip-custom-input").classList.add("active-tip-custom");
 }
 
